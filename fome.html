@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global Solution</title>
+
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+
+    <!-- framework de classes css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- lib de componentes tailwind -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+
+    <!-- lib de icons -->
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+
+    <!-- lib de gráficos -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <script src="scripts/script.js" type="module"></script>
+
+    <noscript>
+        <script>alert("Por favor, ative o javascript nas configurações do seu navegador.");</script>
+    </noscript>
+</head>
+
+<body class="bg-slate-100 dark:bg-slate-900 transition-colors">
+
+    <nav class="bg-slate-100 border-slate-200 dark:bg-slate-900 transition-colors">
+        <div class="max-w-screen-2xl mx-auto p-4 flex flex-wrap items-center justify-between">
+            <a href="https://flowbite.com/" class="flex items-center">
+                <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Abrir menu principal</span> 
+                <i class="fas fa-bars h-6 w-6"></i>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <!-- Conteúdo gerado dinamicamente-->
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex-grow-1">
+        <section id="hero">
+            <div class="mx-auto w-full max-w-screen-2xl px-4 py-6 lg:py-8 flex flex-col gap-4 dark:text-white leading-8">
+                
+                <h1 class="font-medium text-3xl text-lime-400 mb-4">Fome</h1>
+
+                <p>
+                    A fome é um problema complexo que resulta de uma combinação de fatores, incluindo pobreza, desigualdade, conflitos, instabilidade política, mudanças climáticas e falta de acesso a recursos básicos.
+                    Enquanto algumas regiões do globo desfrutam de abundância e variedade de alimentos, muitos outros lugares estão mergulhados em uma crise de fome que compromete a saúde, o desenvolvimento e, em última instância, a vida das pessoas.
+                </p>    
+
+                <p>
+                    O contingente de pessoas afetadas pela fome nos dados do relátorio de 2023 da ONU mostram que quase <span class="text-lime-500 font-medium"> 260 milhões de pessoas passam fome no mundo</span>. Em apenas um ano, de fato, os afetados por "insegurança alimentar grave" saíram de 21,3% em 2021 para 22,7% em 2022, 
+                    um aumento de 1,4%.
+                </p>
+
+                <p>
+                    Os dados refletem um novo aumento pelo quarto ano consecutivo, sendo que os conflitos foram a principal causa de crises alimentares, assim como em 2022.
+                    Porém, em 27 países, 83,9 milhões de pessoas foram afetadas por choques econômicos. A pandemia de Covid-19, por exemplo, foi um dos principais fatores que levaram a esse aumento.
+                </p>
+
+                <p>
+                    O relatório também mostra o impacto da guerra na Ucrânia. Antes da Rússia invadir a Ucrânia, o preço dos alimentos já estava em seu nível mais alto em uma década devido a cadeias de suprimentos embaralhadas e eventos climáticos extremos. 
+                    Após o pico no primeiro semestre de 2022, os preços dos alimentos caíram, mas a guerra continuou a impactar indiretamente a segurança alimentar, com a inflação global e a desvalorização da moeda ucraniana.
+                    Estima-se que a guerra na Ucrânia continue a manteras taxas de fome altas nos próximos anos, e as Nações Unidas alertam que são necessárias ações para tornar os alimentos saudáveis ​​mais baratos e acessíveis. 
+                </p>
+
+                <p> 
+                    Os resultados da catástrofe de guerra, juntamente à pandemia do Covid-19, são empecilhos para a humanidade de diminuir a fome no mundo.
+                </p>
+
+                <div class="block p-6 bg-white border border-gray-200 rounded-lg my-3 shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 flex flex-col gap-4">
+                    
+                    <h3 class="font-medium text-lg text-lime-300">Saiba mais</h3>
+    
+                    <h3 class="font-medium">Insegurança Alimentar x Fome</h3>
+    
+                    <p>
+                        A fome e a insegurança alimentar são conceitos relacionados, mas apresentam diferenças significativas em sua definição e abrangência. É importante diferenciá-las, uma vez que a fome refere-se à 
+                        privação grave e prolongada de alimentos, enquanto a insegurança alimentar abrange a incerteza quanto à disponibilidade e acesso a alimentos suficientes, seguros e nutritivos.
+                    </p>
+    
+                    <p>
+                        A insegurança alimentar, por sua vez, pode variar em intensidade, desde situações de insegurança alimentar leve, em que as pessoas podem ter acesso a alimentos, mas enfrentam incertezas sobre sua qualidade e quantidade, até situações de 
+                        insegurança alimentar grave, que incluem a fome propriamente dita.
+                    </p>
+    
+    
+                    <p>Se você deseja saber mais sobre a insegurança alimentar, clique <a href="/insegurancaAlimentar.html" class="text-lime-500 font-medium underline">aqui</a>.</p>
+                    
+    
+                </div>
+                
+                <h3 class="font-medium text-xl text-lime-400 my-4">Combate à fome</h3>
+
+                <p>
+                    Uma das prioridades no combate à fome não é apenas ampliar o acesso à alimentação para todos, mas também ampliar o acesso a alimentos mais saudáveis
+                    Segundo a ONU, entre 2013 e 2018, a ajuda global total ao setor agrícola e alimentar atingiu cerca de US$ 630 bilhões. No entanto, a maioria desses investimentos flui diretamente para os 
+                    agricultores por meio de políticas comerciais e subsídios, por exemplo: proteção à importação. A necessidade necessidade de redefinir a política de como essa ajuda é feita é urgente, uma vez que 
+                    as estatísticas mostram que a fome está aumentando.
+                </p>
+
+                <p>
+                    {{ ESCREVER COMO A FOME É COMBATIDA ATUALMENTE AQUI }} 
+                </p>
+
+                <h2 class="font-medium text-2xl text-lime-400 my-4">Erradicando a fome</h2>
+
+                <p>
+                    {{ ESCREVER NOSSA SOLUCAO PARA A FOME AQUI }}
+                </p>    
+                
+                <p>
+                    Será que é possível acabar com a fome até 2030? Para saber mais:
+                </p>
+
+                <span>
+                    <a href="/agriculturaSustentavel.html" class="transition ease-in-out hover:scale-105 shadow-xl text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg text-sm px-5 py-3 text-center mr-2 mb-2">
+                        Ler sobre Agriculta Sustentável
+                        <i class="fas fa-arrow-right ml-0.5"></i>
+                    </a>
+                </span>
+            </div>
+        </section>
+    </div>
+
+    <section>
+        <div class="mx-auto w-full max-w-screen-2xl px-4 py-6 lg:py-8 flex flex-col gap-4 dark:text-white leading-8">
+            
+            
+
+        </div>
+
+    </section>
+
+
+    <footer class="mt-10">
+        <div class="mx-auto w-full max-w-screen-2xl px-4 py-6 lg:py-8">
+            <div class="md:flex md:justify-between">
+                <div class="mb-6 md:mb-0">
+                    <a href="https://flowbite.com/" class="flex items-center">
+                        <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="FlowBite Logo" />
+                        <span
+                            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+                    </a>
+                </div>
+                <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3" id="footer-links">
+                    
+                    <!-- Conteúdo gerado dinamicamente-->
+
+                </div>
+            </div>
+
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a
+                        href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. Todos os direitos reservados.
+                </span>
+                <div class="flex mt-4 space-x-6 sm:justify-center items-center sm:mt-0" id="socials">
+
+                    <!-- Conteúdo gerado dinamicamente-->
+
+                    <button id="theme-toggle" type="button" class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-full h-7 w-7  flex items-center justify-center">
+                        <i id="theme-toggle-dark-icon" class="fas fa-moon hidden w-5 h-5"></i>
+                        <i id="theme-toggle-light-icon" class="fas fa-sun hidden w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Configuração de Tema -->
+    <script src="scripts/theme.js"></script>
+</body>
+</html>

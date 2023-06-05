@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global Solution</title>
+
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+
+    <!-- framework de classes css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- lib de componentes tailwind -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+
+    <!-- lib de icons -->
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+
+    <!-- lib de gráficos -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <script src="scripts/script.js" type="module"></script>
+
+    <noscript>
+        <script>alert("Por favor, ative o javascript nas configurações do seu navegador.");</script>
+    </noscript>
+</head>
+
+<body class="bg-slate-100 dark:bg-slate-900 transition-colors">
+
+    <nav class="bg-slate-100 border-slate-200 dark:bg-slate-900 transition-colors">
+        <div class="max-w-screen-2xl mx-auto p-4 flex flex-wrap items-center justify-between">
+            <a href="https://flowbite.com/" class="flex items-center">
+                <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Abrir menu principal</span> 
+                <i class="fas fa-bars h-6 w-6"></i>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <!-- Conteúdo gerado dinamicamente-->
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex-grow-1">
+        <section id="hero">
+            <div class="mx-auto w-full max-w-screen-2xl px-4 py-6 lg:py-8 dark:text-white leading-8">
+                
+                <h1 class="font-medium text-3xl text-lime-400 mb-8">Agricultura sustentável</h1>
+                
+                <div class="grid grid-cols-12 gap-24 ">
+                    <div class="col-span-8 flex flex-col gap-4">
+                        <p>
+                            Bem-vindo a um mundo onde a agricultura encontra a sustentabilidade e forma parcerias críticas para garantir um futuro próspero para o nosso planeta. 
+                            É uma <span class="text-lime-500 font-medium">abordagem inovadora</span> que visa conciliar a produção de alimentos, a conservação dos recursos naturais e o bem-estar das gerações futuras. 
+                        </p>    
+        
+                        <p>
+                            A agricultura sustentável é muito mais do que uma simples prática agrícola; é um compromisso com a saúde do solo, da água e do ar, com o respeito à biodiversidade 
+                            e com a promoção de comunidades rurais vibrantes. Ao adotar métodos sustentáveis, procuramos maximizar a produtividade agrícola ao mesmo tempo em que minimizamos o impacto negativo no meio ambiente.
+                        </p>
+                    </div>
+
+                    <div class="col-span-4 h-96 overflow-hidden rounded-full aspect-square border-4 border-lime-500 shadow-lg">
+                        <img src="/img/agricultura-sustentavel.jpg" alt="Agricultura sustentável" class="transition ease-in-out hover:scale-110 duration-500 h-full object-cover object-center" />
+                    </div>
+                </div>
+                
+                <div class="flex flex-col gap-4">
+                    <h2 class="font-medium text-xl text-lime-400 my-4">Desenvolvimento Sustentável</h2>
+
+                    <p>
+                        A agricultura sustentável é uma das pautas do desenvolvimento sustentável. No contexto mais amplo, a busca por soluções que equilibrem o crescimento econômico, a proteção ambiental e o bem-estar social tem se tornado cada vez mais urgente. 
+                        O desenvolvimento sustentável visa atender às necessidades presentes sem comprometer a capacidade das gerações futuras de suprir suas próprias demandas. É um modelo que reconhece a interdependência 
+                        entre os sistemas naturais e humanos, e busca promover a harmonia entre eles. 
+                    </p>
+
+                    <p>
+                        Por meio de metas e iniciativas como os Objetivos de Desenvolvimento Sustentável (ODS), 
+                        as Nações Unidas têm trabalhado para promover uma transformação global em direção a um futuro mais sustentável e inclusivo para todos. Essas metas abrangem várias áreas, sendo duas delas 
+                        envolvendo o setor agrícola: a promoção de práticas agrícolas sustentáveis e segurança alimentar, ambas abordadas na ODS2.
+                    </p>
+                </div>
+                
+            </div>
+        </section>
+    </div>
+
+    <section class="bg-green-500 dark:bg-green-700 flex items-center p-16">
+        <div class="max-w-screen-2xl px-4 mx-auto text-white dark:text-gray-200">
+            
+            <h1 class="dark:text-white font-medium text-3xl text-center mb-20 text-slate-800" id="fome-zero">Fome Zero</h1>
+
+            <div class="mb-8 text-white font-medium text-lg">
+                <p>
+                    O "Fome Zero" é um dos 17 objetivos globais que está incluído na agenda de <a href="https://www.ipea.gov.br/ods/index.html" target="_blank" referrerpolicy="no-referrer"  class="underline text-indigo-700">Desenvolvimento Sustentável</a> estabelecida pela ONU. 
+                    Possui o objetivo de erradicar a fome, a insegurança alimentar, a desnutrição e promover a agricultura sustentável até 2030. Concluir esse objetivo significaria atingir as seguintes metas : 
+                </p>
+            </div>
+            
+            <ul class="mb-8 space-y-4 text-left leading-8 list-none">
+                <li class="flex items-center space-x-3">
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Acabar com a fome e garantir que todas as pessoas, especialmente os pobres e em situação de vulnerabilidade, incluindo crianças, tenham acesso a alimentos seguros, nutritivos e suficientes durante todo o ano. </span>
+                </li>
+                <li class="flex items-center space-x-3">
+                    <i class="fas fa-chevron-right"></i>
+                    <span>
+                        Acabar com todas as formas de má-nutrição, incluindo atingir, até 2025, as metas acordadas internacionalmente sobre nanismo e caquexia em crianças menores de cinco anos de idade, e atender às necessidades nutricionais
+                        dos adolescentes, mulheres grávidas e lactantes e pessoas idosas.
+                    </span>
+                </li>
+                <li class="flex items-center space-x-3">
+                    <i class="fas fa-chevron-right"></i>
+                    <span>
+                        Dobrar a produtividade agrícola e a renda dos pequenos produtores de alimentos, particularmente das mulheres, povos indígenas, agricultores familiares, pastores e pescadores, inclusive por meio de acesso seguro e 
+                        igual à terra, outros recursos produtivos e insumos, conhecimento, serviços financeiros, mercados e oportunidades de agregação de valor e de emprego não agrícola.
+                    </span>
+                </li>
+                <li class="flex items-center space-x-3">
+                    <i class="fas fa-chevron-right"></i>
+                    <span>
+                        Garantir sistemas sustentáveis de produção de alimentos e implementar práticas agrícolas resilientes, que aumentem a produtividade e a produção, que ajudem a manter os ecossistemas, que fortaleçam a capacidade de adaptação 
+                        às mudanças climáticas, às condições meteorológicas extremas, secas, inundações e outros desastres, e que melhorem progressivamente a qualidade da terra e do solo.
+                    </span>
+                </li>
+                <li class="flex items-center space-x-3">
+                    <i class="fas fa-chevron-right"></i>
+                    <span>
+                        Manter a diversidade genética de sementes, plantas cultivadas, animais de criação e domesticados e suas respectivas espécies selvagens, inclusive por meio de bancos de sementes e plantas diversificados e bem geridos em nível 
+                        nacional, regional e internacional, e garantir o acesso e a repartição justa e equitativa dos benefícios decorrentes da utilização dos recursos genéticos e conhecimentos tradicionais associados, como acordado internacionalmente.
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </section>  
+
+    <section>
+        <div class="mx-auto w-full max-w-screen-2xl px-4 py-6 lg:py-8 dark:text-white leading-8">
+            
+            <h2 class="font-medium text-xl text-lime-400 my-4">Técnicas sustentáveis</h2>
+
+            <div class="grid grid-cols-12 gap-12">
+                <div class="col-span-7 flex flex-col gap-4 mt-4">
+                    <p>
+                        Uma das principais características da agricultura sustentável é a adoção de técnicas de manejo integrado, que visam reduzir o uso de agroquímicos e fertilizantes sintéticos, 
+                        priorizando práticas como a rotação de culturas, o uso de adubos orgânicos, o controle biológico de pragas e doenças, além da preservação de áreas de vegetação nativa. 
+                        Essas práticas colaboram para a manutenção da fertilidade do solo, promovendo a saúde das plantas e a qualidade dos alimentos produzidos.
+                    </p>    
+        
+                    <p>
+                        Além disso, a conservação dos recursos hídricos por meio do uso eficiente da água, por meio de sistemas de irrigação inteligentes e práticas de manejo que minimizam o desperdício. 
+                        A implementação de técnicas de conservação do solo, como o plantio direto e a terraceamento, previne a erosão e a degradação dos solos, protegendo um dos nossos bens mais preciosos.
+                    </p>
+
+                    
+                </div>
+
+                <div id="carousel" class="col-span-5 relative w-full" data-carousel="slide">
+                    <div class="relative h-56 overflow-hidden md:h-96">
+
+                        <!-- imagens geradas pelo script -->
+
+                    </div>
+
+                    <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                            <span class="sr-only">Anterior</span>
+                        </span>
+                    </button>
+                    <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            <span class="sr-only">Próximo</span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <footer class="mt-10">
+        <div class="mx-auto w-full max-w-screen-2xl px-4 py-6 lg:py-8">
+            <div class="md:flex md:justify-between">
+                <div class="mb-6 md:mb-0">
+                    <a href="https://flowbite.com/" class="flex items-center">
+                        <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="FlowBite Logo" />
+                        <span
+                            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+                    </a>
+                </div>
+                <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3" id="footer-links">
+                    
+                    <!-- Conteúdo gerado dinamicamente-->
+
+                </div>
+            </div>
+
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a
+                        href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. Todos os direitos reservados.
+                </span>
+                <div class="flex mt-4 space-x-6 sm:justify-center items-center sm:mt-0" id="socials">
+
+                    <!-- Conteúdo gerado dinamicamente-->
+
+                    <button id="theme-toggle" type="button" class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-full h-7 w-7  flex items-center justify-center">
+                        <i id="theme-toggle-dark-icon" class="fas fa-moon hidden w-5 h-5"></i>
+                        <i id="theme-toggle-light-icon" class="fas fa-sun hidden w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Configuração de Tema -->
+    <script src="scripts/theme.js"></script>
+</body>
+</html>

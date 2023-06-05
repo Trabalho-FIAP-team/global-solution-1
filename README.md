@@ -1,5 +1,8 @@
-# global-solution-1
+# Global Solution 1
+
 Global solution do 1 semestre referente à importância do combate à fome e da agricultura sustentável
+
+## Pontuação
 
 [4 Pontos] – Crie uma página principal (index.html) que apresente a Problemática deste projeto e instigue o usuário a ver as demais páginas que serão derivadas desta página principal.
 
@@ -11,10 +14,13 @@ Global solution do 1 semestre referente à importância do combate à fome e da 
 
 [4 Pontos] – Nesta página devem ser apresentadas fotos, curiosidade (ou afins) sobre os assuntos relacionados à Problemática tratada nesta GS. Implemente nesta página alguma chamada de ao mens uma função de JS escrita pelo grupo.
 
-Também será considerado na pontuação:
+## Penalização
 
 - Para a padronização da entrega, deverá ser desenvolvida 5 páginas para compor o projeto. – Perda de 1 ponto.
 - Se o projeto foi estruturado nos arquivos e pastas padrões (img, js, css....) – Perda de 2 pontos.
 - Se o projeto foi enviado em um arquivo compactado. – Perda de 2 pontos.
 - Análise de Usabilidade - Perda de até 1 ponto por página.
 - O arquivo “script.js” deverá conter ao menos 1 funções. – Perda de 2 pontos.
+
+
+##

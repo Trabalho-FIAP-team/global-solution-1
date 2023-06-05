@@ -1,0 +1,87 @@
+
+tailwind.config = {
+    darkMode: 'class',
+}
+
+const keys = {
+    themeStorageKey: 'gs-solution-fiap-theme',
+    darkTheme: 'dark',
+    lightTheme: 'light',
+    chartJs: {
+        darkColor: 'rgba(255, 255, 255, .87)',
+        lightColor: 'rgba(102, 102, 102, 1)',
+    }
+}
+
+
+inicializarTema();
+
+window.addEventListener('DOMContentLoaded', () => {
+
+    // Adiciona evento de clique no botão de trocar o tema
+    document.getElementById('theme-toggle')?.addEventListener('click', () => alternarTema());
+
+    inicializarChartJS();
+});
+
+async function inicializarChartJS() {
+    try {
+        Chart.defaults.font.family = window.getComputedStyle(document.querySelector('body')).getPropertyValue('font-family');
+        Chart.register(ChartDataLabels);
+    } catch {
+        console.error("Erro ao configurar ChartJS");
+    }
+}
+
+function inicializarTema() {
+    
+    // Checa se a preferência do usuário é tema escuro e ativa o mesmo
+    if (localStorage.getItem(keys.themeStorageKey) === keys.darkTheme || (!(keys.themeStorageKey in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        localStorage.setItem(keys.themeStorageKey, keys.darkTheme);
+    } else { // Caso contrário, ativa o tema claro
+        localStorage.setItem(keys.themeStorageKey, keys.lightTheme);
+    }
+
+    carregarTema();
+}
+
+function alternarTema() {
+
+    if (localStorage.getItem(keys.themeStorageKey) === keys.darkTheme) {
+        localStorage.setItem(keys.themeStorageKey, keys.lightTheme);
+    } else {
+        localStorage.setItem(keys.themeStorageKey, keys.darkTheme);
+    }
+
+    carregarTema();
+}
+
+function carregarTema() {
+    
+    var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+    // Se o tema atual é o claro, seta o escuro
+    if (localStorage.getItem(keys.themeStorageKey) === keys.darkTheme) {
+        
+        document.documentElement.classList.add(keys.darkTheme);
+        localStorage.setItem(keys.themeStorageKey, keys.darkTheme);
+        themeToggleLightIcon.classList.remove('hidden');
+        themeToggleDarkIcon.classList.add('hidden');
+
+        try {
+            Chart.defaults.color = keys.chartJs.darkColor;
+        } catch {}
+
+    } else { // Caso contrário, seta o claro
+        
+        document.documentElement.classList.remove(keys.darkTheme);
+        localStorage.setItem(keys.themeStorageKey, keys.lightTheme);
+        themeToggleDarkIcon.classList.remove('hidden');
+        themeToggleLightIcon.classList.add('hidden');
+
+        try {
+            Chart.defaults.color = keys.chartJs.lightColor;
+        } catch {}
+    }
+}
