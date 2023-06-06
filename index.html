@@ -36,10 +36,10 @@
 <body class="bg-slate-100 dark:bg-slate-900 transition-colors">
     <div class="flex flex-col min-h-screen">
         <nav class="bg-slate-100 border-slate-200 dark:bg-slate-900 transition-colors">
-            <div class="max-w-screen-2xl mx-auto p-4 flex flex-wrap items-center justify-between">
+            <div class="max-w-screen-2xl mx-auto p-4 flex flex-wrap items-center justify-between border-b">
                 <a href="" class="flex">
                     <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">OPTI</span>
-                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-lime-400">FOOD</span>
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap text-lime-400">FOOD</span>
                 </a>
                 <button data-collapse-toggle="navbar-default" type="button"
                     class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -59,85 +59,29 @@
         </nav>
 
         <div class="flex-grow-1">
-            <section id="hero"> 
-                <h1 class='dark:text-white font-medium text-3xl text-center mb-20 mt-8'>Quem somos nós?</h1>
-                <iframe 
-                    width="940" height="528.5" 
-                    class="mx-auto mt-[-2%]"
-                    src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=1">
-                </iframe>
+            <section id="hero">
+                <div class="mx-auto w-full max-w-screen-2xl px-4 py-6 lg:py-8 flex flex-col gap-4 dark:text-white leading-8">
+                    <section class="">
+                        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 mt-[-4%]">
+                            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Matamos a fome através da Logística!</h1>
+                            <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400">Maximizando a eficiência, reduzindo o desperdício - Transformando a logística de alimentos com inteligência artificial generativa.</p>
+                        </div>
+                        <iframe 
+                            width="940" height="528.5" 
+                            class="mx-auto mt-[-2%] z-auto rounded-lg shadow-lg"
+                            allow="autoplay"
+                            src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=1?autoplay=1">
+                    </iframe>
+                    </section>
+                </div>
             </section>
         </div>
-
-
-        <section>
-            <div class="max-w-screen-2xl px-4 mx-auto py-20">
-                
-                <h1 class="dark:text-white font-medium text-3xl text-center mb-20">Cenário da Fome</h1>
-
-
-                
-            </div>
-        </section>  
-
-        
-        
         <!-- TODO: Definir cor do background -->
-        <section>
-            <div class="max-w-screen-2xl px-4 mx-auto py-20">
-                
-                <h1 class="dark:text-white font-medium text-3xl text-center mb-20">Insegurança Alimentar</h1>
-                
-                <div class="grid md:grid-cols-2 gap-20">
-                    <div class="dark:text-white">
-                        <p class="mb-8">
-                            No mundo, existem 2,3 bilhões de indivíduos em situação de insegurança alimentar grave ou moderada.
-                        </p>
-
-                        <a href="" class="transition-colors text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
-                            Ver mais
-                            <i class="fas fa-arrow-right ml-0.5"></i>
-                        </a>
-                        
-                    </div>
-                    <div>
-                        <canvas  id="populacao-inseguranca-alimentar-chart"></canvas>
-                    </div>
-                </div>
-            </div>
-        </section>
     </div>
 
     <footer>
-        <div class="mx-auto w-full max-w-screen-2xl px-4 py-6 lg:py-8">
-            <div class="md:flex md:justify-between">
-                <div class="mb-6 md:mb-0">
-                    <a href="" class="flex items-center">
-                        <img src="img/svg/Leaves.svg" class="h-8 mr-3" alt="FlowBite Logo" />
-                        <span
-                            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
-                    </a>
-                </div>
-                <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3" id="footer-links">
-                    
-                    <!-- Conteúdo gerado dinamicamente-->
-
-                </div>
-            </div>
-
-            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-            
-            <div class="sm:flex sm:items-center sm:justify-between">
-                <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a
-                        href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. Todos os direitos reservados.
-                </span>
-                <div class="flex mt-4 space-x-6 sm:justify-center items-center sm:mt-0" id="socials">
-
-                    <!-- Conteúdo gerado dinamicamente-->
-
-
-                </div>
-            </div>
+        <div class="-z-10 relative">
+            <img src="img/svg/waves.svg" class="mt-[-22.20%]">
         </div>
     </footer>
 
