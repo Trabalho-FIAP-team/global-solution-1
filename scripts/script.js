@@ -60,9 +60,9 @@ function criarNavbar() {
 
         if (item.href == window.location.pathname || (item.href == '/index.html' && window.location.pathname == '/')) {
             a.setAttribute('aria-current', 'page');
-            a.className += 'text-white bg-lime-700 md:bg-transparent md:text-lime-700 dark:text-white md:dark:text-lime-500';
+            a.className += 'text-white bg-lime-500 md:bg-transparent md:text-lime-500 dark:text-white md:dark:text-lime-400';
         } else {
-            a.className += 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-lime-700 dark:text-white md:dark:hover:text-lime-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent';
+            a.className += 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-lime-400 dark:text-white md:dark:hover:text-lime-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent';
         }
 
         li.appendChild(a);
@@ -169,10 +169,18 @@ function carregarConteudoIndex() {
  */
 function carregarConteudoInsegurancaAlimentar() {
     try {
-        new Chart(document.getElementById("populacao-inseguranca-alimentar-brasil-chart").getContext("2d"), 
+        new Chart(document.getElementById("populacao-inseguranca-alimentar-no-brasil-chart").getContext("2d"), 
             Graficos.getGraficoPopulacaoInsegurancaAlimentarBrasilConfig());
     } catch {
         console.error("Erro ao carregar gráfico de apresentação da insegurança alimentar no Brasil");
+    }
+
+    try {
+        new Chart(document.getElementById("crescimento-inseguranca-alimentar-chart").getContext("2d"), 
+            Graficos.getGraficoCrescimentoLinearInsegurancaAlimentar());
+    } catch (e){
+        console.error(e);
+        console.error("Erro ao carregar gráfico de apresentação de crescimento da insegurança alimentar no Mundo");
     }
 }
 

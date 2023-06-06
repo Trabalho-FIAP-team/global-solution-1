@@ -71,6 +71,7 @@ function carregarTema() {
 
         try {
             Chart.defaults.color = keys.chartJs.darkColor;
+            Chart.defaults.scale.gridLines.color = keys.chartJs.darkColor;
         } catch {}
 
     } else { // Caso contrário, seta o claro
@@ -82,6 +83,7 @@ function carregarTema() {
 
         try {
             Chart.defaults.color = keys.chartJs.lightColor;
+            Chart.defaults.scale.gridLines.color = keys.chartJs.lightColor;
         } catch {}
     }
 }
