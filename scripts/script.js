@@ -48,7 +48,7 @@ function criarNavbar() {
 
     var navbar = document.getElementById('navbar-default');
     var navbarList = navbar.appendChild(document.createElement('ul'));
-    navbarList.className = 'transition-colors font-medium flex flex-col p-4 md:p-0 mt-4 border border-slate-100 rounded-lg bg-slate-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-slate-100 dark:bg-slate-800 md:dark:bg-slate-900 dark:border-slate-700';
+    navbarList.className = 'transition-colors font-bold flex flex-col p-4 md:p-0 mt-4 border border-slate-100 rounded-lg bg-slate-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-slate-100 dark:bg-slate-800 md:dark:bg-slate-900 dark:border-slate-700';
 
     menuItems.forEach(function(item) {
         var li = document.createElement('li');

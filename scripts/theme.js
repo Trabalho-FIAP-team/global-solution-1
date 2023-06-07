@@ -36,10 +36,10 @@ async function inicializarChartJS() {
 function inicializarTema() {
     
     // Checa se a preferência do usuário é tema escuro e ativa o mesmo
-    if (localStorage.getItem(keys.themeStorageKey) === keys.darkTheme) {
-        localStorage.setItem(keys.themeStorageKey, keys.darkTheme);
-    } else { // Caso contrário, ativa o tema claro
+    if (localStorage.getItem(keys.themeStorageKey) === keys.lightTheme) {
         localStorage.setItem(keys.themeStorageKey, keys.lightTheme);
+    } else { // Caso contrário, ativa o tema claro
+        localStorage.setItem(keys.themeStorageKey, keys.darkTheme);
     }
 
     carregarTema();
