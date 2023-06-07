@@ -7,7 +7,6 @@ window.addEventListener('DOMContentLoaded', function() {
     var currentURL = window.location.pathname;
     
     criarNavbar();
-    criarFooter();
 
     if (currentURL.includes('/index.html') || currentURL == '/') {
         
@@ -15,17 +14,21 @@ window.addEventListener('DOMContentLoaded', function() {
 
     } else if (currentURL.includes('/fome.html')) {
         
-        
+        criarFooter();
+
     } else if (currentURL.includes('/insegurancaAlimentar.html')) {
         
+        criarFooter();
         carregarConteudoInsegurancaAlimentar();
 
     } else if (currentURL.includes('/agriculturaSustentavel.html')) {
         
+        criarFooter();
         carregarConteudoAgriculturaSustentavel();
 
     } else if (currentURL.includes('/galeria.html')) { 
         
+        criarFooter();
         carregarConteudoGaleria();
     }
 });
@@ -156,6 +159,26 @@ function criarFooter() {
  * Carrega o conteúdo dinâmico da página /index.html
  */
 function carregarConteudoIndex() {
+
+    resetarScrollDaPagina();
+
+    const buttonExplorarMais = document.getElementById("button-explorar-mais");
+
+    if (buttonExplorarMais) {
+        
+        buttonExplorarMais.addEventListener("click", function() {
+            var screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+            window.scrollTo({
+                top: screenHeight,
+                behavior: 'smooth'
+            });
+
+            document.body.style.overflow = "auto";
+
+            buttonExplorarMais.style.display = "none";
+        });
+    }
+
     try {
         new Chart(document.getElementById("populacao-inseguranca-alimentar-chart").getContext("2d"), 
             Graficos.getGraficoPopulacaoInsegurancaAlimentarConfig());

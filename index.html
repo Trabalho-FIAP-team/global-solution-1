@@ -33,58 +33,127 @@
     </noscript>
 </head>
 
-<body class="bg-slate-100 dark:bg-slate-900 transition-colors">
-    <div class="flex flex-col min-h-screen">
-        <nav class="bg-slate-100 border-slate-200 dark:bg-slate-900 transition-colors">
-            <div class="max-w-screen-2xl mx-auto p-4 flex flex-wrap items-center justify-between border-b dark:border-gray-800">
-                <a href="" class="flex">
-                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">OPTI</span>
-                    <span class="self-center text-2xl font-semibold whitespace-nowrap text-lime-400">FOOD</span>
-                </a>
-                <button data-collapse-toggle="navbar-default" type="button"
-                    class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                    aria-controls="navbar-default" aria-expanded="false">
-                    <span class="sr-only">Abrir menu principal</span>
-                    <i class="fas fa-bars h-6 w-6"></i>
-                </button>
-                <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-                    <!-- Conteúdo gerado dinamicamente-->
-                </div>
-                
-                <button id="theme-toggle" type="button" class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-full h-7 w-7  flex items-center justify-center">
-                    <i id="theme-toggle-dark-icon" class="fas fa-moon hidden w-5 h-5"></i>
-                    <i id="theme-toggle-light-icon" class="fas fa-sun hidden w-5 h-5"></i>
-                </button>
-            </div>
-        </nav>
+<body class="bg-slate-100 dark:bg-slate-900 transition-colors overflow-hidden overflow-x-hidden">
+    <div id="page-1">
+        <div class="flex flex-col h-screen">
+            <nav class="bg-slate-100 border-slate-200 dark:bg-slate-900 transition-colors">
+                <div class="max-w-screen-2xl mx-auto p-4 flex flex-wrap items-center justify-between border-b dark:border-gray-800">
+                    <a href="" class="flex">
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">OPTI</span>
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap text-lime-400">FOOD</span>
+                    </a>
 
-        <div class="flex-grow-1">
-            <section id="hero">
-                <div class="mx-auto w-full max-w-screen-2xl px-4 py-6 lg:py-8 flex flex-col gap-4 dark:text-white leading-8">
-                    <section class="">
-                        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 mt-[-4%]">
-                            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Matamos a fome através da Logística!</h1>
-                            <p class=" text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400">Maximizando a eficiência, reduzindo o desperdício - Transformando a logística de alimentos com inteligência artificial generativa.</p>
-                        </div>
-                        <iframe 
-                            width="940" height="528.5" 
-                            class="mx-auto mt-[-2%] z-auto rounded-lg shadow-lg drop-shadow-lg "
-                            allow="autoplay"
-                            src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=1?autoplay=1">
-                        </iframe>
-                    </section>
+                    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                        <!-- Conteúdo gerado dinamicamente-->
+                    </div>
+                    
+                    <div class="flex flex-row items-center">
+                        <button data-collapse-toggle="navbar-default" type="button"
+                            class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                            aria-controls="navbar-default" aria-expanded="false">
+                            <span class="sr-only">Abrir menu principal</span>
+                            <i class="fas fa-bars h-6 w-6"></i>
+                        </button>
+
+                        <button id="theme-toggle" type="button" class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-full h-7 w-7  flex items-center justify-center">
+                            <i id="theme-toggle-dark-icon" class="fas fa-moon hidden w-5 h-5"></i>
+                            <i id="theme-toggle-light-icon" class="fas fa-sun hidden w-5 h-5"></i>
+                        </button>
+                    </div>
                 </div>
-            </section>
+            </nav>
+
+            <div class="flex-grow">
+                <section class="flex flex-col justify-between h-full mx-auto w-full max-w-screen-2xl flex flex-col gap-4 dark:text-white">
+                    <div class=" px-4 py-6 lg:py-8  leading-8">
+                        <section class="">
+                            <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 mt-[-4%]">
+                                <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Matamos a fome através da Logística!</h1>
+                                <p class=" text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400">Maximizando a eficiência, reduzindo o desperdício - Transformando a logística de alimentos com inteligência artificial generativa.</p>
+                            </div>
+                            
+                            <iframe 
+                                width="940" height="528.5" 
+                                class="mx-auto mt-[-2%] z-auto rounded-lg shadow-lg drop-shadow-lg "
+                                allow="autoplay"
+                                src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=1?autoplay=1">
+                            </iframe>
+                        </section>
+                    </div>
+
+                    <div class="flex items-end w-full justify-center mb-6">
+                        <button id="button-explorar-mais" class="font-bold  hover:-translate-y-1 hover:scale-105 transition-all ease-in-out duration-200">
+                            <div class="flex flex-col justify-center items-center">
+                                <i class="fas fa-chevron-up text-xl drop-shadow-md"></i>
+                                <span class="text-lg tracking-wide drop-shadow-md">Explorar</span>
+                            </div>
+                        </button>
+                    </div>
+
+                </section>
+            </div>
         </div>
-        <!-- TODO: Definir cor do background -->
+
+        <div>
+            <div class="-z-10 relative">
+                <img src="img/svg/waves-footer-index.svg" class="mt-[-22.20%] bg-cover">
+            </div>
+        </div>
     </div>
 
-    <footer>
-        <div class="-z-10 relative">
-             <img src="img/svg/waves-footer-index.svg" class="mt-[-22.20%] bg-cover">
+    <div id="page-2">
+        <div class="flex flex-col h-screen bg-lime-400 transition-colors">
+            <section class="flex flex-col justify-between h-full mx-auto w-full max-w-screen-2xl flex flex-col py-24 gap-4">
+                teste
+            </section>
         </div>
-    </footer>
+    </div>
 
+    <div id="page-3">
+        <div class="flex flex-col">
+            <div>
+                <div class="-z-10 relative">
+                    <img src="img/svg/waves-footer-index.svg" class="bg-cover rotate-180">
+                </div>
+            </div>
+            
+
+            <div class="mx-auto max-w-screen-md -mt-[5%] lg:mb-16 mb-4 gap-6 flex flex-col items-center justify-center">
+                <h2 class="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+                    Entre em contato
+                </h2>
+                <p class="font-light text-gray-500 dark:text-gray-400 sm:text-xl text-center">
+                    Ficou interessado em nosso negócio? Não perca tempo, envie-nos uma mensagem agora mesmo e comece uma jornada conosco!
+                </p>
+                <button id="view-more" type="button" class="hover:scale-105 transition text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-semibold rounded-lg px-5 py-2 text-center mr-2 mb-2">
+                    Enviar Email
+                    <i class="fas fa-paper-plane ml-2"></i>
+                </button>
+            </div>
+
+            <footer class="transition-colors">
+                <div class="mx-auto w-full max-w-screen-2xl px-4 ">
+                    
+                    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 " />
+                    
+                    <div class="sm:flex sm:items-center sm:justify-between mb-4">
+                        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+                            © 2023 <a href="/index.html" class="hover:underline">Optifood</a>. Esta é uma marca fictícia e não possui registro jurídico.
+                        </span>
+                        <div class="flex space-x-6 sm:justify-center items-center">
+                            <div class="">
+                                <a href="/index.html" class="flex">
+                                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">OPTI</span>
+                                    <span class="self-center text-2xl font-semibold whitespace-nowrap text-lime-400">FOOD</span>
+                                </a>
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
     <!-- Configuração de Tema -->
     <script src="scripts/theme.js"></script>
 </body>
