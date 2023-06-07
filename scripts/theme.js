@@ -86,4 +86,15 @@ function carregarTema() {
             Chart.defaults.scale.gridLines.color = keys.chartJs.lightColor;
         } catch {}
     }
+
+    try {
+        var allCharts = Chart.instances;
+
+        for (var chartId in allCharts) {
+            if (allCharts.hasOwnProperty(chartId)) {
+                allCharts?.[chartId].update();
+            }
+        }
+    } catch {}
+    
 }
