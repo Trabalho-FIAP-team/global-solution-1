@@ -81,8 +81,8 @@ function criarFooter() {
             title: 'Sobre a fome',
             items: [
                 { text: 'Fome', href: '/fome.html' },
-                { text: 'Insegurança alimentar', href: '/insegurancaAlimentar.html' },
-                { text: 'Agricultura sustentável', href: '/agriculturaSustentavel.html' },
+                { text: 'Insegurança alimentar', href: 'insegurancaAlimentar.html' },
+                { text: 'Agricultura sustentável', href: 'agriculturaSustentavel.html' },
                 { text: 'Galeria', href: '/galeria.html' }
             ]
         },
@@ -211,7 +211,7 @@ async function carregarConteudoGaleria() {
     galeriaGridElement.appendChild(loadingDiv);
 
     const QUANTIDADE_COLUNAS = 4;
-    const LIMITE_REQUISICOES_MAIS_FOTOS = 3;
+    const LIMITE_REQUISICOES_MAIS_FOTOS = 2;
     
     new Promise(async function(resolve, reject) { 
 
@@ -219,10 +219,10 @@ async function carregarConteudoGaleria() {
         await carregarArquivosDiretorio("/img/galeria/", ["jpg", "jpeg", "png"])
             .then((fotos) => {
                 
-                //separa as fotos em grupos de 4, onde (3) é o número de vezes que será possível 
+                //separa as fotos em grupos de LIMITE_REQUISICOES_MAIS_FOTOS, que é o número de vezes que será possível ver mais
                 var fotosGrid = divideArrayEmSubarray(fotos, LIMITE_REQUISICOES_MAIS_FOTOS + 1);
 
-                // divide cada subgrupo em 4 colunas
+                // divide cada subgrupo em QUANTIDADE_COLUNAS colunas
                 fotosGrid = fotosGrid.map(fotos => divideArrayEmSubarray(fotos, QUANTIDADE_COLUNAS));
 
                 if (!fotosGrid) {
