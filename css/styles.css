@@ -13,7 +13,7 @@
 
 /* color and shape of scrollbar thumb */
 ::-webkit-scrollbar-thumb {
-  background-color: lightgray;
+  background-color: rgb(190, 190, 190);
   border-radius: 25px;
 }
 
