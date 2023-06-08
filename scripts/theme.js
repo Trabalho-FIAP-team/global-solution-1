@@ -59,7 +59,7 @@ function alternarTema() {
 
         setTimeout(() => {
             carregarTema();
-        }, 470);
+        }, 440);
     } else {
         carregarTema();
     }

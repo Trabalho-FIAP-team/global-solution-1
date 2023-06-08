@@ -179,7 +179,7 @@ function carregarConteudoIndex() {
     }
 
     function enableScroll() {
-        document.body.style.overflow = "auto";  
+        document.body.classList.remove('overflow-y-hidden');
         window.removeEventListener("wheel", handleScroll);
         buttonExplorarMais.classList.remove("opacity-100");
         buttonExplorarMais.classList.add("opacity-0");
