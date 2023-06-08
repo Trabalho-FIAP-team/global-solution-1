@@ -43,11 +43,15 @@ function inicializarTema() {
     }
 
     carregarTema();
-    inicializarVideo();
+    
+    if(window.location.pathname.includes('/index.html') || window.location.pathname === '/') {
+        inicializarVideo();
+    }
 }
 
 function inicializarVideo() {
     var iframe = document.getElementById('video-pitch');
+    
     if (localStorage.getItem(keys.themeStorageKey) === keys.lightTheme) {
         iframe.src = 'https://www.youtube.com/embed/ydmChookrbQ'
     } else {
