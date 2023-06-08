@@ -12,23 +12,14 @@ window.addEventListener('DOMContentLoaded', function() {
         
         carregarConteudoIndex();
 
-    } else if (currentURL.includes('/fome.html')) {
-        
-        criarFooter();
-
     } else if (currentURL.includes('/insegurancaAlimentar.html')) {
         
-        criarFooter();
         carregarConteudoInsegurancaAlimentar();
 
     } else if (currentURL.includes('/agriculturaSustentavel.html')) {
-        
-        criarFooter();
         carregarConteudoAgriculturaSustentavel();
 
     } else if (currentURL.includes('/galeria.html')) { 
-        
-        criarFooter();
         carregarConteudoGaleria();
     }
 });
@@ -70,88 +61,6 @@ function criarNavbar() {
 
         li.appendChild(a);
         navbarList.appendChild(li);
-    });
-}
-
-/**
- * Carrega o conteúdo dinamico do rodapé do layout padrão
- */
-function criarFooter() {
-    
-    var socialItems = [];
-    var footerItems = [ 
-        {
-            title: 'Sobre a fome',
-            items: [
-                { text: 'Fome', href: '/fome.html' },
-                { text: 'Insegurança alimentar', href: 'insegurancaAlimentar.html' },
-                { text: 'Agricultura sustentável', href: 'agriculturaSustentavel.html' },
-                { text: 'Galeria', href: '/galeria.html' }
-            ]
-        },
-        {
-            title: 'Inovação Tecnológica',
-            items: [
-                { text: 'Flowbite', href: 'https://flowbite.com/', external: true },
-                { text: 'Tailwind CSS', href: 'https://tailwindcss.com/', external: true }
-            ]
-        }, {
-            title: 'Recursos',
-            items: [
-                { text: 'Flowbite', href: 'https://flowbite.com/', external: true },
-                { text: 'Tailwind CSS', href: 'https://tailwindcss.com/', external: true }
-            ]
-        }, 
-    ];
-
-    var socialsElement = document.getElementById('socials');
-    var footerLinksElement = document.getElementById('footer-links');
-
-    socialItems.reverse().forEach(function(item) {
-        var a = document.createElement('a');
-        a.href = item.href;
-        a.className = 'text-gray-500 hover:text-gray-900 dark:hover:text-white';
-        a.innerHTML = `<i class="${item.icon} h-5 w-5 my-auto block"></i><span class="sr-only">${item.text} page</span>`;
-        socialsElement.insertBefore(a, socialsElement.firstChild);
-    });
-
-    footerItems.forEach(function(item) {
-        var div = document.createElement('div');
-        var h2 = document.createElement('h2');
-        var ul = document.createElement('ul');
-        
-        
-        h2.className = 'mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white';
-        h2.textContent = item.title;
-        ul.className = 'text-gray-600 dark:text-gray-400 font-medium';
-
-        item.items.forEach(function(subitem) {
-            var li = document.createElement('li');
-            var a = document.createElement('a');
-
-            li.className = 'mb-4 flex flex-row align-items-center gap-2 cursor-pointer hover:text-gray-900 dark:hover:text-white';
-            a.href = subitem.href;
-            a.className = '';
-            a.textContent = subitem.text;
-
-            li.appendChild(a);
-
-            if (subitem.external) {
-                a.target = '_blank';
-                a.rel = 'noopener';
-
-                var icon = document.createElement('i');
-                icon.className = 'fas fa-external-link-alt text-xs mt-1';
-
-                li.appendChild(icon);
-            }
-
-            ul.appendChild(li);
-        });
-        
-        div.appendChild(h2);
-        div.appendChild(ul);
-        footerLinksElement.appendChild(div);
     });
 }
 

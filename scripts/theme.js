@@ -34,7 +34,7 @@ async function inicializarChartJS() {
 }
 
 function inicializarTema() {
-    
+
     // Checa se a preferência do usuário é tema escuro e ativa o mesmo
     if (localStorage.getItem(keys.themeStorageKey) === keys.lightTheme) {
         localStorage.setItem(keys.themeStorageKey, keys.lightTheme);
@@ -43,6 +43,16 @@ function inicializarTema() {
     }
 
     carregarTema();
+    inicializarVideo();
+}
+
+function inicializarVideo() {
+    var iframe = document.getElementById('video-pitch');
+    if (localStorage.getItem(keys.themeStorageKey) === keys.lightTheme) {
+        iframe.src = 'https://www.youtube.com/embed/ydmChookrbQ'
+    } else {
+        iframe.src = 'https://www.youtube.com/embed/f78D4tEC608'
+    }
 }
 
 function alternarTema() {
@@ -66,12 +76,12 @@ function alternarTema() {
 }
 
 function trocarVideo() {
-    var iframe = document.getElementById('video');
+    var iframe = document.getElementById('video-pitch');
 
     if (localStorage.getItem(keys.themeStorageKey) === keys.lightTheme) {
-        iframe.src = 'https://www.youtube.com/embed/ebKoJPGqgIg'
+        iframe.src = 'https://www.youtube.com/embed/ydmChookrbQ'
     } else {
-        iframe.src = 'https://www.youtube.com/embed/UrXhbUyR8Mw'
+        iframe.src = 'https://www.youtube.com/embed/f78D4tEC608'
     }
 }
 
