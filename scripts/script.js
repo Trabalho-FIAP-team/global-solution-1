@@ -173,11 +173,28 @@ function carregarConteudoIndex() {
                 behavior: 'smooth'
             });
 
-            document.body.style.overflow = "auto";
-
-            buttonExplorarMais.style.display = "none";
+            enableScroll();
+            
         });
     }
+
+    function enableScroll() {
+        document.body.style.overflow = "auto";  
+        window.removeEventListener("wheel", handleScroll);
+        buttonExplorarMais.classList.remove("opacity-100");
+        buttonExplorarMais.classList.add("opacity-0");
+    }
+
+    let scrollTries = 0;
+
+    function handleScroll() {
+        console.log(scrollTries);
+        if (scrollTries++ > 5) {
+            enableScroll();
+        }
+    }
+    
+    window.addEventListener("wheel", handleScroll);
 
     try {
         new Chart(document.getElementById("populacao-inseguranca-alimentar-chart").getContext("2d"), 
