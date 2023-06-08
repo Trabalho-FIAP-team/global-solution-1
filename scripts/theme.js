@@ -53,7 +53,26 @@ function alternarTema() {
         localStorage.setItem(keys.themeStorageKey, keys.darkTheme);
     }
 
-    carregarTema();
+    if(window.location.pathname.includes('/index.html') || window.location.pathname === '/') {
+    
+        trocarVideo();
+
+        setTimeout(() => {
+            carregarTema();
+        }, 470);
+    } else {
+        carregarTema();
+    }
+}
+
+function trocarVideo() {
+    var iframe = document.getElementById('video');
+
+    if (localStorage.getItem(keys.themeStorageKey) === keys.lightTheme) {
+        iframe.src = 'https://www.youtube.com/embed/ebKoJPGqgIg'
+    } else {
+        iframe.src = 'https://www.youtube.com/embed/UrXhbUyR8Mw'
+    }
 }
 
 function carregarTema() {
